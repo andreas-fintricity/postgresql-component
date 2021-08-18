@@ -21,12 +21,14 @@
     "elasticio-component"
   ],
   "scripts": {
+    "start": "node ./node_modules/ferryman/runGlobal.js",
     "pretest": "eslint lib spec verifyCredentials.js --fix",
     "test": "npm run unit-test",
     "unit-test": "mocha spec/unit --recursive --timeout 50000",
     "integration-test": "mocha spec/integration --recursive --timeout 50000"
   },
   "dependencies": {
+    "@openintegrationhub/ferryman": "^1.1.5",
     "dotenv": "8.2.0",
     "elasticio-node": "0.0.9",
     "elasticio-sailor-nodejs": "2.6.24",
