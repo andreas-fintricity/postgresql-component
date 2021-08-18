@@ -1,4 +1,4 @@
-FROM node:10-alpine AS base
+FROM node:12-alpine AS base
 RUN apk --no-cache add \
     python \
     make \
@@ -7,7 +7,7 @@ RUN apk --no-cache add \
 
 WORKDIR /usr/src/app
 
-COPY package.json /usr/src/app
+COPY ./ package.json
 
 RUN npm install --production
 
